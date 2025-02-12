@@ -16,7 +16,12 @@
     </div>
     <h1>WhatsApp Direct</h1>
     <p>Enter a phone number to start chatting without saving it.</p>
-    <input type="text" id="phoneNumber" placeholder="Enter phone number with country code" required>
+    <div class="input-group">
+      <select id="countryCode">
+        <!-- Country codes will be populated by JavaScript -->
+      </select>
+      <input type="text" id="phoneNumber" placeholder="Enter phone number" required>
+    </div>
     <button id="sendButton">Send</button>
   </div>
 
