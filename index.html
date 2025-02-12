@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Direct</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <!-- Google Ads Script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="whatsapp-logo.png" alt="WhatsApp Logo">
+    </div>
+    <h1>WhatsApp Direct</h1>
+    <p>Enter a phone number to start chatting without saving it.</p>
+    <input type="text" id="phoneNumber" placeholder="Enter phone number with country code" required>
+    <button id="sendButton">Send</button>
+  </div>
+
+  <!-- Important Phone Numbers Section -->
+  <div class="important-numbers">
+    <h2>Important Phone Numbers in India</h2>
+    <div class="service">
+      <h3>Indian Railway Enquiry</h3>
+      <p>For train schedules, bookings, and inquiries.</p>
+      <a href="https://wa.me/139" class="service-link">Chat on WhatsApp: 139</a>
+    </div>
+    <div class="service">
+      <h3>Women's Safety Helpline</h3>
+      <p>24/7 helpline for women in distress.</p>
+      <a href="https://wa.me/1091" class="service-link">Chat on WhatsApp: 1091</a>
+    </div>
+    <div class="service">
+      <h3>COVID-19 Helpline</h3>
+      <p>For COVID-19 related queries and assistance.</p>
+      <a href="https://wa.me/911123978046" class="service-link">Chat on WhatsApp: +91-11-23978046</a>
+    </div>
+    <div class="service">
+      <h3>Child Helpline</h3>
+      <p>For children in need of care and protection.</p>
+      <a href="https://wa.me/1098" class="service-link">Chat on WhatsApp: 1098</a>
+    </div>
+    <div class="service">
+      <h3>Police Emergency</h3>
+      <p>For immediate police assistance.</p>
+      <a href="https://wa.me/100" class="service-link">Chat on WhatsApp: 100</a>
+    </div>
+  </div>
+
+  <!-- Google Ads Section -->
+  <div class="ads-container">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <!-- Popup Animation -->
+  <div class="popup" id="popup">
+    <p>Redirecting to WhatsApp...</p>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker
+          .register("/sw.js")
+          .then((registration) => {
+            console.log("Service Worker registered: ", registration);
+          })
+          .catch((error) => {
+            console.log("Service Worker registration failed: ", error);
+          });
+      });
+    }
+  </script>
+</body>
+</html>
