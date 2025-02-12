@@ -26,10 +26,26 @@ body {
   height: 100px;
 }
 
-input[type="text"] {
-  width: 80%;
-  padding: 10px;
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 10px 0;
+}
+
+#countryCode {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+  background-color: white;
+  color: #075e54;
+}
+
+input[type="text"] {
+  width: 60%;
+  padding: 10px;
   border: none;
   border-radius: 5px;
   font-size: 16px;
